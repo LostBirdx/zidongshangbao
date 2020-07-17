@@ -6,7 +6,7 @@ headers  = {
     'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 MicroMessenger/7.0.9.501 NetType/WIFI MiniProgramEnv/Windows WindowsWechat',
     'content-type':'application/json',
     # 我自己的
-	'token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0ODAyMCwiZXhwIjoxNjg4OTUxMzU0LCJpc3MiOiJnaW4tYmxvZyJ9.l9pG0JCHYK9GlDpQr8m1KlIMxuk4mER4cGciKal2zuc',
+	'token':'********',  #需要你自己抓取来使用自己的token
     'referer':'https://servicewechat.com/wxd2bebfc67ee4a7eb/58/page-frame.html',
     'Accept-Encoding':'gzip,deflate,br'
 }
