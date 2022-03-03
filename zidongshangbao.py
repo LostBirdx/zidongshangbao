@@ -8,7 +8,6 @@ import random
 
 MAX_SLEEP_TIME = 60
 
-sys.stdout = open('/media/lthpc/hd_auto/Liu/xiaobingbiao/zidongshangbao/somefile.txt', 'a+')
 
 
 headers = {
