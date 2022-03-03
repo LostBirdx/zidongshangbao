@@ -21,6 +21,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
   
-    - name: run python
+    - name: Run python
         run :|
           python zidongshangbao.py
