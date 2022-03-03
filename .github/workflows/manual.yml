@@ -6,7 +6,7 @@ name: zidongshangbao
 # or API.
 on:
   schedule:
-    - cron: '00 9 * * *'
+    - cron: '00 1 * * *'
   workflow_dispatch:
 
     
