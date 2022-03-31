@@ -20,6 +20,17 @@ headers = {
     'referer':'https://servicewechat.com/wxd2bebfc67ee4a7eb/82/page-frame.html',
     'Accept-Encoding':'gzip,deflate,br'
 }
+
+headers_zxz = {
+	'Host':'reserve.25team.com',
+    'Connection':'keep-alive',
+    'Content-Length':'678',
+    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 MicroMessenger/7.0.9.501 NetType/WIFI MiniProgramEnv/Windows WindowsWechat',
+    'content-type':'application/json',
+	'token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0ODcxNiwiZXhwIjoxNjkwMDc1MTU3LCJpc3MiOiJnaW4tYmxvZyJ9.Fq6rIewHDgSDUYT07jHKdSVjt4pZ_LaNA5woFmuhXOw',  #需要你自己抓取来使用自己的token
+    'referer':'https://servicewechat.com/wxd2bebfc67ee4a7eb/82/page-frame.html',
+    'Accept-Encoding':'gzip,deflate,br'
+}
 headers_lql = {
 	  'Host':'reserve.25.team',
     'Connection':'keep-alive',
@@ -30,56 +41,7 @@ headers_lql = {
     'referer':'https://servicewechat.com/wxd2bebfc67ee4a7eb/58/page-frame.html',
     'Accept-Encoding':'gzip,deflate,br'
 }
-# data = {
-# 	"content": {
-# 		"0": "不在校-京外",
-# 		"1": "",
-# 		"2": "近期无返京计划",
-# 		"3": "",
-# 		"4": "",
-# 		"5": "放假离校",
-# 		"6": "重庆市垫江县桂溪街道桂西大道南段南阳公园 经纬度:107.33515,30.3268",
-# 		"7": "否",
-# 		"8": "37.3°C以下",
-# 		"9": "正常",
-# 		"10": "否",
-# 		"11": "",
-# 		"12": "",
-# 		"13": "否",
-# 		"14": "",
-# 		"15": "否",
-# 		"16": "均正常",
-# 		"17": "否",
-# 		"18": "否",
-# 		"19": "",
-# 		"20": "",
-# 		"21": "否",
-# 		"22": "否",
-# 		"23": "否",
-# 		"24": "是",
-# 		"25": "20210323",
-# 		"26": "",
-# 		"27": "是",
-# 		"28": "20210413",
-# 		"29": "",
-# 		"30": "是",
-# 		"31": "20211219",
-# 		"32": "",
-# 		"33": "",
-# 		"34": ""
-# 	},
-# 	"version": 20,
-# 	"stat_content": {},
-# 	"location": {
-# 		"province": "重庆市",
-# 		"country": "中国",
-# 		"city": "",
-# 		"longitude": 107.33515,
-# 		"latitude": 30.3268
-# 	},
-# 	"sick": "",
-# 	"accept_templateid": ""
-# }
+
 
 data_lql = {
 	"content": {
@@ -167,6 +129,56 @@ data = {
 	"accept_templateid": ""
 }
 
+data_zxz = {
+	"content": {
+		"0": "在京在校-集中住宿",
+		"1": "汇才公寓",
+		"2": "",
+		"3": "",
+		"4": "",
+		"5": "",
+		"6": "北京市昌平区城北街道中国石油大学汇才公寓4号楼 经纬度:116.23128,40.22077",
+		"7": "否",
+		"8": "37.3°C以下",
+		"9": "正常",
+		"10": "否",
+		"11": "",
+		"12": "",
+		"13": "否",
+		"14": "",
+		"15": "否",
+		"16": "均正常",
+		"17": "否",
+		"18": "否",
+		"19": "",
+		"20": "",
+		"21": "否",
+		"22": "否",
+		"23": "否",
+		"24": "是",
+		"25": "20210323",
+		"26": "",
+		"27": "是",
+		"28": "20210413",
+		"29": "",
+		"30": "是",
+		"31": "20211119",
+		"32": "",
+		"33": "",
+		"34": ""
+	},
+	"version": 20,
+	"stat_content": {},
+	"location": {
+		"province": "北京市",
+		"country": "中国",
+		"city": "",
+		"longitude": 116.23128,
+		"latitude": 40.22077
+	},
+	"sick": "",
+	"accept_templateid": ""
+}
 url = "https://reserve.25team.com/wxappv1/yi/addReport" #进入界面请求
 
 
@@ -182,3 +194,10 @@ html = response.text
 print("xbb:\n")
 print(response.status_code)  #返回一个json格式数据
 print(html)
+
+
+response_zxz = requests.post(url,headers = headers_zxz,json = data_zxz)
+html_zxz = response_lql.text
+print("zxz:\n")
+print(response_zxz.status_code)  #返回一个json格式数据
+print(html_zxz)
